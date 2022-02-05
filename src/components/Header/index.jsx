@@ -18,36 +18,36 @@ const Header = () => {
 
     const headerNavigation = useMemo(() => (
         <nav 
-            className={classNames(`sm:ml-8 sm:relative h-full sm:pt-0 w-full flex flex-col justify-between
-            pt-12 pb-8`, globalStyles.px, classes.headerNav)}>
-            <List component="ul" className={classNames('flex flex-col sm:flex-row')}>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
-                    <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0', 
+            className={classNames(`sm:ml-12 sm:relative h-full w-full flex flex-col justify-between
+            pt-12 pb-8 sm:px-0 sm:py-0`, globalStyles.px, classes.headerNav)}>
+            <List component="ul" className={classNames('flex flex-col sm:flex-row sm:pb-0 sm:pt-0')}>
+                <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/" >
+                    <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
+                        <ListItemText classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0', 
                             globalStyles.lightGreyColor, classes.headerNavItemText)}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
-                    <ListItemButton>
+                <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/projects">
+                    <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText 
-                            classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0', 
-                            globalStyles.lightGreyColor)}} 
+                            classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0', 
+                            globalStyles.lightGreyColor, classes.headerNavItemText)}} 
                             primary="Projects" 
                         />
                     </ListItemButton>
                 </ListItem>
-                <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
-                    <ListItemButton>
+                <ListItem className={classNames('sm:px-0 sm:w-auto')} disablePadding onClick={clickHandler} component={Link} to="/resume">
+                    <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText 
-                            classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0',
-                            globalStyles.lightGreyColor)}} 
+                            classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0',
+                            globalStyles.lightGreyColor, classes.headerNavItemText)}} 
                             primary="Resume" 
                         />
                     </ListItemButton>
                 </ListItem>
             </List>
             <Hidden smUp>
-                <Link to="/resume" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
+                <Link to="/" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
                     <Button 
                         className={classNames('text-white font-bold w-full py-3 text-base capitalize', classes.headerGetStarted, 
                         globalStyles.yellowBg, 'bg-transition')}
@@ -86,6 +86,16 @@ const Header = () => {
                     { headerNavigation }
                 </Hidden>
             </div>
+            <Hidden smDown>
+                <Link to="/" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
+                    <Button 
+                        className={classNames('text-white font-bold w-full py-2 shadow-none text-base capitalize', classes.headerGetStarted, 
+                        globalStyles.yellowBg, 'bg-transition')}
+                        variant="contained">
+                        Get scootin
+                    </Button>
+                </Link>
+            </Hidden>
             <Hidden smUp>
                 <Drawer 
                     anchor="left" 

@@ -11,5 +11,10 @@ export const useStyles = makeStyles(theme => ({
         height: 'calc(100% - 72px)',
         top: 72,
         width: '80%'
+    },
+    headerNavItemText: {
+        [theme.breakpoints.up('sm')]: {
+            color: '#939CAA'
+        }
     }
 }));
