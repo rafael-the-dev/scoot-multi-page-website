@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import React, { useMemo, useCallback, useState } from 'react';
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/images/logo.svg'
 import { Button, Drawer, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText, Typography } from '@mui/material';
@@ -18,44 +18,46 @@ const Header = () => {
 
     const headerNavigation = useMemo(() => (
         <nav 
-            className={classNames('sm:ml-8 sm:relative pt-4 h-full sm:pt-0 w-full', classes.headerNav, 
-             )}>
-            <Hidden mdUp>
-                <Button onClick={menuClickHandler}>
-                    <ArrowBackIcon classes={{ root: 'text-white'}} />
-                </Button>
-            </Hidden>
+            className={classNames(`sm:ml-8 sm:relative h-full sm:pt-0 w-full flex flex-col justify-between
+            pt-12 pb-8`, globalStyles.px, classes.headerNav)}>
             <List component="ul" className={classNames('flex flex-col sm:flex-row')}>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/" >
                     <ListItemButton>
                         <ListItemText classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0', 
-                            classes.headerNavItemText)}} primary="Home" />
+                            globalStyles.lightGreyColor, classes.headerNavItemText)}} primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/projects">
                     <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0')}} primary="Projects" />
+                        <ListItemText 
+                            classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0', 
+                            globalStyles.lightGreyColor)}} 
+                            primary="Projects" 
+                        />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding onClick={clickHandler} component={Link} to="/resume">
                     <ListItemButton>
-                        <ListItemText classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0')}} primary="Resume" />
+                        <ListItemText 
+                            classes={{ root: classNames('text-white color-transition sm:mb-0 sm:mt-0',
+                            globalStyles.lightGreyColor)}} 
+                            primary="Resume" 
+                        />
                     </ListItemButton>
                 </ListItem>
             </List>
             <Hidden smUp>
-                <div  className={classNames('flex',  classes.headerDrawerBottom)}>
-                    <Link to="/resume" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
-                        <Button 
-                            className={classNames('text-white font-bold w-full', classes.headerGetStarted, 
-                            classes.headerContactMe, 'bg-transition')}>
-                            Contact me
-                        </Button>
-                    </Link>
-                </div>
+                <Link to="/resume" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
+                    <Button 
+                        className={classNames('text-white font-bold w-full py-3 text-base capitalize', classes.headerGetStarted, 
+                        globalStyles.yellowBg, 'bg-transition')}
+                        variant="contained">
+                        Get scootin
+                    </Button>
+                </Link>
             </Hidden>
         </nav>
-    ), [ classes, clickHandler, menuClickHandler ]);
+    ), [ classes, clickHandler, globalStyles ]);
 
     return (
         <header 
@@ -65,7 +67,7 @@ const Header = () => {
                     <IconButton 
                         className={classNames(globalStyles.yellowColor)}
                         onClick={menuClickHandler}>
-                        <MenuIcon />
+                        { canIOpenNavBar ? <CloseIcon /> : <MenuIcon /> }
                     </IconButton>
                 </Hidden>
                 <Link to="/">
@@ -85,7 +87,11 @@ const Header = () => {
                 </Hidden>
             </div>
             <Hidden smUp>
-                <Drawer anchor="left" open={canIOpenNavBar} onClose={menuClickHandler} classes={{ paper: classes.headerDrawe}}>
+                <Drawer 
+                    anchor="left" 
+                    open={canIOpenNavBar} 
+                    onClose={menuClickHandler} 
+                    classes={{ root: classNames(classes.headerDrawerRoot), paper: classNames(classes.headerDrawerPaper, globalStyles.darkNavyBg)}}>
                     { headerNavigation }
                 </Drawer>
             </Hidden>

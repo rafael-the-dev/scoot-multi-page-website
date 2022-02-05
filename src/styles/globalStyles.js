@@ -23,6 +23,24 @@ export const useGlobalStyles = makeStyles(theme => ({
             fill: 'currentcolor !important'
         }
     },
+    darkNavyBg: {
+        backgroundColor: '#495567'
+    },
+    dimGreyBg: {
+        backgroundColor: '#939CAA'
+    },
+    yellowBg: {
+        backgroundColor: '#FCB72B !important'
+    },
+    darkNavyColor: {
+        color: '#495567'
+    },
+    dimGreyColor: {
+        color: '#939CAA'
+    },
+    lightGreyColor: {
+        color: '#E5ECF4'
+    },
     yellowColor: {
         color: '#FCB72B'
     }
