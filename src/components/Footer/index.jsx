@@ -13,22 +13,22 @@ const Footer = () => {
 
     return (
         <footer className={classNames(globalStyles.px, globalStyles.darkNavyBg, `py-12 flex flex-col items-center
-            `)}>
-            <div className={classNames()}>
+            sm:justify-between sm:flex-row sm:py-8`)}>
+            <div className={classNames('sm:flex sm:items-center')}>
                 <Link to="/">
                     <Logo 
                         className={classNames(globalStyles.svgColor, 'text-white')}
                     />
                 </Link>
-                <ul className={classNames('flex flex-col mt-8 items-center')}>
-                    <li className={classNames('mb-3')}>
+                <ul className={classNames('flex flex-col mt-8 items-center sm:mt-0 sm:ml-8 sm:flex-row md:ml-12')}>
+                    <li className={classNames('mb-3 sm:mb-0 sm:mr-4')}>
                         <Link
                             className={classNames(globalStyles.dimGreyColor, 'font-bold')} 
                             to="/">
                             About
                         </Link>
                     </li>
-                    <li className={classNames('mb-3')}>
+                    <li className={classNames('mb-3 sm:mb-0 sm:mr-4')}>
                         <Link
                             className={classNames(globalStyles.dimGreyColor, 'font-bold')} 
                             to="/">
@@ -44,7 +44,7 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
-            <ul className={classNames('flex mt-12 items-center')}>
+            <ul className={classNames('flex mt-12 items-center sm:mt-0')}>
                 <li className={classNames('mr-3')}>
                     <FacebookIcon className={classNames(globalStyles.yellowColor)} />
                 </li>
