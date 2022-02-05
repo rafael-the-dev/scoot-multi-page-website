@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import circlePattern from '../assets/images/icons/bg-pattern-circle.svg';
 
 export const useGlobalStyles = makeStyles(theme => ({
     main: {
@@ -24,4 +23,7 @@ export const useGlobalStyles = makeStyles(theme => ({
             fill: 'currentcolor !important'
         }
     },
+    yellowColor: {
+        color: '#FCB72B'
+    }
 }));

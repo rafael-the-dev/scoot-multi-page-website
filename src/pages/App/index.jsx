@@ -10,7 +10,7 @@ const App = () => {
     const theme = createTheme();
 
     const HomePage = loadable(() => import(/* webpackChunkName: "HomePage" */ '../Home'));
-    //const Header = loadable(() => import(/* webpackChunkName: "Header" */ '../../components/Header'));
+    const Header = loadable(() => import(/* webpackChunkName: "Header" */ '../../components/Header'));
     //const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ '../../components/Footer'));
     //const PricingPage = loadable(() => import(/* webpackChunkName: "PricingPage" */ '../Pricing'));
     //const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
@@ -24,6 +24,7 @@ const App = () => {
                 <ThemeProvider theme={theme}>
                     <AppContextProvider>
                         <Router>
+                            <Header />
                             <Routes>
                                 <Route exact path="/" element={<HomePage />} />
                             </Routes>
