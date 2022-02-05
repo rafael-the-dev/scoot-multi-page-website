@@ -10,7 +10,10 @@ export const useStyles = makeStyles(theme => ({
     headerDrawerPaper: {
         height: 'calc(100% - 72px)',
         top: 72,
-        width: '80%'
+        width: '80%',
+        [theme.breakpoints.up(450)]: {
+            width: 330
+        }
     },
     headerNavItemText: {
         [theme.breakpoints.up('sm')]: {
