@@ -12,7 +12,7 @@ const Footer = () => {
     const globalStyles = useGlobalStyles();
 
     return (
-        <footer className={classNames(globalStyles.px, globalStyles.darkNavyBg, `py-12 flex flex-col items-center
+        <footer className={classNames(globalStyles.px, classes.footer, `py-12 flex flex-col items-center
             sm:justify-between sm:flex-row sm:py-8`)}>
             <div className={classNames('sm:flex sm:items-center')}>
                 <Link to="/">
