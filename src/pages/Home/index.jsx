@@ -10,7 +10,7 @@ const Home = () => {
 
     return (
         <main>
-            <section className={classNames(globalStyles.px, classes.hero, `bg-no-repeat bg-cover
+            <section className={classNames(globalStyles.px, classes.hero, `bg-no-repeat
                 flex flex-col justify-center items-center`)}>
                 <Typography
                     className={classNames('font-bold text-white text-center')}
