@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
 import { Button, Hidden, Typography } from '@mui/material';
+import DefaultCard from '../../components/DefaultCard';
+import telemetryImage from '../../assets/images/telemetry.jpg'
+import nearYouImage from '../../assets/images/near-you.jpg'
+import paymentsImage from '../../assets/images/payments.jpg'
 
 const Home = () => {
     const classes = useStyles();
@@ -34,6 +38,23 @@ const Home = () => {
                     </Button>
                 </Link>
             </section>
+            <div className={classNames('pt-24')}>
+                <DefaultCard 
+                    description="The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app."
+                    image={telemetryImage}
+                    title="Easy to use riding telemetry"
+                />
+                <DefaultCard 
+                    description="Scoot is available in 4 major cities so far. We’re expanding rapidly, so be sure to let us know if you want to see us in your hometown. We’re aiming to let our scooters loose on 23 cities over the coming year."
+                    image={nearYouImage}
+                    title="Coming to a city near you"
+                />
+                <DefaultCard 
+                    description="Our payment is as easy as one two three. We accept most credit cards and debit cards. You can also link your PayPal account inside the app. Need to pay later? No worries! You can defer payment for up to a month."
+                    image={paymentsImage}
+                    title="Zero hassle payments"
+                />
+            </div>
         </main>
     );
 };
