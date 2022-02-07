@@ -7,6 +7,7 @@ import DefaultHero from '../../components/DefaultHero';
 import DefaultCard from '../../components/DefaultCard';
 import digitalEraImage from '../../assets/images/digital-era.jpg'
 import betterLivingImage from '../../assets/images/better-living.jpg'
+import JoinUsSection from '../../components/JoinUsSection';
 
 const AboutPage = () => {
     const classes = useStyles();
@@ -32,6 +33,7 @@ const AboutPage = () => {
                     title="Better urban living"
                 />
             </div>
+            <JoinUsSection />
         </main>
     );
 };
