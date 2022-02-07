@@ -4,6 +4,11 @@ import leftDownwardArrow from '../../assets/images/patterns/left-downward-arrow.
 import circles from '../../assets/images/patterns/circle.svg'
 
 export const useStyles = makeStyles(theme => ({
+    card: {
+        [theme.breakpoints.up('md')]: {
+            width: '31.3333%'
+        }
+    },
     index: {
         '&::after': {
             backgroundColor: '#FCB72B',

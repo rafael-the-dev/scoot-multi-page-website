@@ -5,7 +5,7 @@ import ourCommunityImage from '../../assets/images/our-community.jpg'
 import classNames from 'classnames'
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
-
+import { Typography } from '@mui/material';
 
 const JoinUsSection = () => {
     const classes = useStyles();
@@ -13,7 +13,14 @@ const JoinUsSection = () => {
 
     return (
         <section className={classNames(globalStyles.px, 'py-12')}>
-            <div className={classNames('md:flex md:justify-between')}>
+            <Typography 
+                className={classNames(globalStyles.darkNavyColor, 'text-center font-bold')}
+                component="h2"
+                variant="h4" 
+                >
+                Our values
+            </Typography>
+            <div className={classNames('pt-16 md:flex md:justify-between')}>
                 <JoinUsCard 
                     description="We’re using cutting edge technology to drive accessible urban transportation forward. Our fully electric scooters are a joy to ride!"
                     index={0}

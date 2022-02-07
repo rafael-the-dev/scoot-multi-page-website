@@ -18,7 +18,7 @@ const JoinUsCard = ({ description, image, index, title }) => {
     return (
         <Card 
             elevation={0} 
-            className={classNames(globalStyles.px, classes.card, `mb-8`)}
+            className={classNames(globalStyles.px, classes.card, `mb-8 md:px-0`)}
             component="article">
             <div className={classNames(imagesClasses[index], classes.index, `after:flex after:mx-auto 
                 after:rounded-full after:font-bold after:justify-center after:items-center after:text-2xl`)}>
@@ -29,10 +29,10 @@ const JoinUsCard = ({ description, image, index, title }) => {
                     image={ image }
                 />
             </div>
-            <CardContent className={classNames(classes.cardContent, `-mt-4`, )}>
+            <CardContent className={classNames(classes.cardContent, `-mt-4 md:px-0 md:pb-0`, )}>
                 <Typography 
                     className={classNames(globalStyles.darkNavyColor, 'text-center font-bold')}
-                    component="h2"
+                    component="h3"
                     variant="h5" 
                     >
                     { title }
