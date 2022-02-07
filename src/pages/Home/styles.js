@@ -42,5 +42,31 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             marginLeft: 80,
         }
+    },
+    steppersCardsContainer: {
+        [theme.breakpoints.up('sm')]: {
+            '&::before': {
+                backgroundColor: '#E5ECF4',
+                height: '100%',
+                left: '10.5%',
+                top: 0,
+                width: 9
+            }
+        },
+        [theme.breakpoints.up(804)]: {
+            '&::before': {
+                left: '10%',
+            }
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingLeft: '5%',
+            paddingRight: '5%',
+            '&::before': {
+                height: 9,
+                left: 0,
+                top: 'calc(6rem + 30px)',
+                width: 'calc(100% - 31.3333%)'
+            }
+        }
     }
 }));

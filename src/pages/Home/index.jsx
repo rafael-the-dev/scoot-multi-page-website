@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
         <main>
-            <section className={classNames(globalStyles.px, classes.hero, `bg-no-repeat md:mb-24
+            <section className={classNames(globalStyles.px, classes.hero, `bg-no-repeat
                 flex flex-col justify-center items-center md:items-start`)}>
                 <Typography
                     className={classNames('font-bold text-white text-center md:text-left sm:text-5xl')}
@@ -39,7 +39,8 @@ const Home = () => {
                     </Button>
                 </Link>
             </section>
-            <div className={classNames('pt-16')}>
+            <div className={classNames(classes.steppersCardsContainer, `pt-16 sm:relative sm:before:absolute
+                md:flex md:items-start md:pt-24`)}>
                 <ContentCard 
                     description="Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. "
                     index={0}
@@ -56,7 +57,7 @@ const Home = () => {
                     title="Enjoy the ride"
                 />
             </div>
-            <div className={classNames('pt-24')}>
+            <div className={classNames('pt-24 md:pt-20')}>
                 <DefaultCard 
                     description="The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app."
                     image={telemetryImage}
