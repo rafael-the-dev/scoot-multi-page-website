@@ -7,6 +7,7 @@ import DefaultCard from '../../components/DefaultCard';
 import telemetryImage from '../../assets/images/telemetry.jpg'
 import nearYouImage from '../../assets/images/near-you.jpg'
 import paymentsImage from '../../assets/images/payments.jpg'
+import ContentCard from '../../components/ContentCard';
 
 const Home = () => {
     const classes = useStyles();
@@ -38,6 +39,23 @@ const Home = () => {
                     </Button>
                 </Link>
             </section>
+            <div className={classNames('pt-16')}>
+                <ContentCard 
+                    description="Use the app to find the nearest scooter to you. We are continuously placing scooters in the areas with most demand, so one should never be too far away. "
+                    index={0}
+                    title="Locate with app"
+                />
+                <ContentCard 
+                    description="We show the most important info for the scooters closest to you. So you know how much charge they have left and can see roughly how much it will cost."
+                    index={1}
+                    title="Pick your scooter"
+                />
+                <ContentCard 
+                    description="Scan the QR code and the bike will unlock. Retract the cable lock, put on a helmet, and you’re off! Always lock bikes away from walkways and accessibility ramps."
+                    index={2}
+                    title="Enjoy the ride"
+                />
+            </div>
             <div className={classNames('pt-24')}>
                 <DefaultCard 
                     description="The Scoot app is available with riding telemetry. This means it can show you your average speed, how long you've been using the scooter, your traveling distance, and many more things all in an easy to use app."

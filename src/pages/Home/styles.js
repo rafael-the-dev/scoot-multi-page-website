@@ -7,6 +7,7 @@ import heroDesktop from '../../assets/images/home-hero-tablet.jpg'
 import leftDownwardArrow from '../../assets/images/patterns/left-downward-arrow.svg'
 
 const linearGradient = 'linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, .1))';
+const linearGradientDesktop = 'linear-gradient(to right, rgba(0, 0, 0, .4), rgba(0, 0, 0, .1))';
 
 export const useStyles = makeStyles(theme => ({
     hero: {
@@ -21,7 +22,7 @@ export const useStyles = makeStyles(theme => ({
             height: 550,
         },
         [theme.breakpoints.up('md')]: {
-            backgroundImage: `url(${leftDownwardArrow}), url(${rightArrow}), url(${whiteCircles}), ${linearGradient}, url(${heroDesktop})`,
+            backgroundImage: `url(${leftDownwardArrow}), url(${rightArrow}), url(${whiteCircles}), ${linearGradientDesktop}, url(${heroDesktop})`,
             backgroundPosition: 'left -452px bottom 130px, left 565px bottom 127px, right -24px bottom 132px, center, center',
             backgroundSize: '531px, 299px, 175px, cover, cover',
             height: 500,

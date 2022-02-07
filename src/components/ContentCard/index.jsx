@@ -1,0 +1,39 @@
+import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import classNames from 'classnames';
+import { Link } from 'react-router-dom';
+import React, { useMemo, useCallback, useState } from 'react';
+import { useStyles } from './styles'
+import { useGlobalStyles } from '../../styles';
+
+const ContentCard = ({ description, index, title }) => {
+    const classes = useStyles();
+    const globalStyles = useGlobalStyles();
+    
+    const imagesClasses = useMemo(() => [
+        classes.locating,
+        classes.picking, 
+        classes.enjoying
+    ], [ classes ]);
+
+    return (
+        <article className={classNames(globalStyles.px, 'mb-12')}>
+            <Typography 
+                className={classNames(globalStyles.darkNavyColor, imagesClasses[index], `text-center md:text-left 
+                font-bold before:bg-no-repeat before:bg-contain before:bg-center before:block before:mx-auto 
+                before:mb-6`, classes.title)}
+                component="h2"
+                variant="h5" 
+                >
+                { title }
+            </Typography>
+            <Typography 
+                className={classNames(globalStyles.dimGreyColor, 'mt-6 text-center md:text-left sm:text-base')}
+                variant="body2" 
+                >
+                { description }
+            </Typography>
+        </article>
+    );
+};
+
+export default ContentCard;
