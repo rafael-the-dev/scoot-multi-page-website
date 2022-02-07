@@ -14,7 +14,7 @@ const App = () => {
     const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ '../../components/Footer'));
     const SignInBanner = loadable(() => import(/* webpackChunkName: "SignInBanner" */ '../../components/SignInBanner'));
     //const PricingPage = loadable(() => import(/* webpackChunkName: "PricingPage" */ '../Pricing'));
-    //const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
+    const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
     //const ContactPage = loadable(() => import(/* webpackChunkName: "ContactPage" */ '../Contact'));
 
     //useEffect(() => AOS.init(), [])
@@ -27,7 +27,8 @@ const App = () => {
                         <Router>
                             <Header />
                             <Routes>
-                                <Route exact path="/" element={<HomePage />} />
+                                <Route exact path="/about-us" element={<AboutUsPage />} />
+                                <Route path="/" element={<HomePage />} />
                             </Routes>
                             <SignInBanner />
                             <Footer />
