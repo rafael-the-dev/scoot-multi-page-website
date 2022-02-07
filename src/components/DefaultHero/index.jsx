@@ -17,7 +17,7 @@ const DefaultHero = ({ page, title }) => {
             className={classNames('block jus py-12 bg-no-repeat bg-center bg-cover', bgClasses[page],
             globalStyles.px)}>
              <Typography
-                className={classNames('font-bold text-white text-center md:text-left sm:text-5xl')}
+                className={classNames('font-bold text-white text-center sm:text-left sm:text-5xl')}
                 component="h1"
                 variant="h4">
                 { title }
