@@ -22,19 +22,23 @@ export const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${leftDownwardArrow}), url(${rightArrow}), url(${whiteCircles}), ${linearGradient}, url(${heroDesktop})`,
+            backgroundPosition: 'left -452px bottom 130px, left 565px bottom 127px, right -24px bottom 132px, center, center',
+            backgroundSize: '531px, 299px, 175px, cover, cover',
+            height: 500,
+        },
+        [theme.breakpoints.up(1200)]: {
             backgroundPosition: 'left -452px bottom 130px, left 600px bottom 127px, right -24px bottom 132px, center, center',
             backgroundSize: '531px, 354px, 175px, cover, cover',
-            height: 500,
         }
     },
     heroDescription: {
-        [theme.breakpoints.up(1200)]: {
+        [theme.breakpoints.up('md')]: {
             marginLeft: 80,
             width: 400
         }
     },
     heroLink: {
-        [theme.breakpoints.up(1200)]: {
+        [theme.breakpoints.up('md')]: {
             marginLeft: 80,
         }
     }

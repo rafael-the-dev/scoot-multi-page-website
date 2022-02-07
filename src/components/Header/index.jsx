@@ -5,8 +5,8 @@ import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import logo from '../../assets/images/logo.svg'
-import { Button, Drawer, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText, Typography } from '@mui/material';
+import { ReactComponent as Logo } from '../../assets/images/logo.svg'
+import { Button, Drawer, Hidden, IconButton, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 
 const Header = () => {
     const classes = useStyles();
@@ -71,10 +71,8 @@ const Header = () => {
                     </IconButton>
                 </Hidden>
                 <Link to="/">
-                    <img 
-                        alt=""
+                    <Logo 
                         className={classNames()}
-                        src={logo}
                     />
                 </Link>
                 <Hidden smUp>
