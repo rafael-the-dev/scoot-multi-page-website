@@ -5,7 +5,14 @@ import circles from '../../assets/images/patterns/circle.svg'
 
 export const useStyles = makeStyles(theme => ({
     card: {
-        
+        [theme.breakpoints.up('md')]: {
+            backgroundImage: `url(${circles})`,
+            backgroundSize: 300,
+            backgroundPosition: 'right -250px center',
+            '&:nth-child(even)': {
+                backgroundPosition: 'left -250px center',
+            }
+        }
     },
     cardMediaContainer: {
         '&::after': {
@@ -19,6 +26,12 @@ export const useStyles = makeStyles(theme => ({
             '&::after': {
                 backgroundImage: `url(${leftDownwardArrow}), url(${circles})`,
             }
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingRight: '7%',
+            '&::after': {
+                backgroundImage: `url(${leftDownwardArrow})`,
+            }
         }
     },
     telemetry: {
@@ -29,6 +42,11 @@ export const useStyles = makeStyles(theme => ({
             '&::after': {
                 backgroundPosition: 'right -308px bottom 50px, right -250px center',
                 backgroundSize: '597px, 300px',
+            }
+        },
+        [theme.breakpoints.up('md')]: {
+            '&::after': {
+                backgroundPosition: 'right -222px bottom 7px, right -250px center',
             }
         }
     },
@@ -44,6 +62,16 @@ export const useStyles = makeStyles(theme => ({
                 backgroundPosition: 'left -221px top, left -250px center',
                 backgroundSize: '433px, 300px',
             }
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingLeft: '5%',
+            '&::after': {
+                backgroundImage: `url(${rightArrow})`,
+                backgroundPosition: 'left -221px top 17px, left -250px center',
+            },
+            '& + div': {
+                marginRight: '7%'
+            }
         }
     },
     payments: {
@@ -56,6 +84,11 @@ export const useStyles = makeStyles(theme => ({
                 backgroundPosition: 'right -347px top 39px, right -250px center',
                 backgroundSize: '673px, 300px',
             }
+        },
+        [theme.breakpoints.up('md')]: {
+            '&::after': {
+                backgroundPosition: 'right -347px top 39px, right -250px center',
+            }
         }
     },
     cardMedia: {
@@ -66,6 +99,10 @@ export const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             paddingLeft: '8%',
             paddingRight: '8%'
+        },
+        [theme.breakpoints.up('md')]: {
+            marginLeft: '7%',
+            maxWidth: '40%'
         }
     }
 }));
