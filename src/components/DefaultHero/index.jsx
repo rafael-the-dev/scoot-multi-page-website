@@ -9,7 +9,8 @@ const DefaultHero = ({ page, title }) => {
     const globalStyles = useGlobalStyles();
 
     const bgClasses = useMemo(() => ({
-        about: classes.heroAbout
+        about: classes.heroAbout,
+        careers: classes.heroCareers
     }), [ classes ])
 
     return (
