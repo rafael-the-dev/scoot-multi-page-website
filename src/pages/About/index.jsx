@@ -29,12 +29,14 @@ const AboutPage = () => {
                 {
                     id: 'faq2',
                     question: 'Can I find a nearby Scoots?',
-                    answer: ''
+                    answer: `Definitely! Simply open up the app and allow us to find your location while using it. We'll 
+                        show you all of the closest Scoots and some extra useful information. `
                 },
                 {
                     id: 'faq3',
                     question: 'Do I need a license to ride?',
-                    answer: ''
+                    answer: `Yup! We provide information inside the app regarding local laws and the license you need to be 
+                        able to ride our Scoots.`
                 }
             ]
         }, 
@@ -49,12 +51,16 @@ const AboutPage = () => {
                 {
                     id: 'faq5',
                     question: 'How about the rules & regulations?',
-                    answer: ''
+                    answer: `Now is not the time to be a rule breaker. Be sure you're complying with all local laws and 
+                        regulations. Also, just be a good human being. Be sure not to park your Scoot where it can 
+                        block access to buildings or get in people's way.`
                 },
                 {
                     id: 'faq6',
                     question: 'What if I damage my Scoot?',
-                    answer: ''
+                    answer: `Be sure to read our terms and conditions carefully. Not the most fun job we know but we make 
+                        it as clear as possible. There's an option to add insurance for each trip, or you can sign 
+                        up for annual insurance if you're a regular Scooter.`
                 }
             ]
         }
