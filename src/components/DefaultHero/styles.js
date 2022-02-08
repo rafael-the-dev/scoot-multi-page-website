@@ -10,12 +10,16 @@ import aboutHeroDesktopImage from '../../assets/images/about-hero-desktop.jpg'
 import careersHeroDesktopImage from '../../assets/images/careers-locations-hero-desktop.jpg'
 
 export const useStyles = makeStyles(theme => ({
+    hero: {
+        [theme.breakpoints.up('sm')]: {
+            backgroundPosition: 'right -24px center, center !important',
+            backgroundSize: '175px, cover !important'
+        },
+    },
     heroAbout:{
         backgroundImage: `url(${aboutHeroImage})`,
         [theme.breakpoints.up('sm')]: {
             backgroundImage: `url(${whiteCircles}), url(${aboutHeroTabletImage})`,
-            backgroundPosition: 'right -24px center, center !important',
-            backgroundSize: '175px, cover !important'
         },
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${whiteCircles}), url(${aboutHeroDesktopImage})`,
@@ -25,8 +29,6 @@ export const useStyles = makeStyles(theme => ({
         backgroundImage: `url(${careersHeroImage})`,
         [theme.breakpoints.up('sm')]: {
             backgroundImage: `url(${whiteCircles}), url(${careersHeroTabletImage})`,
-            backgroundPosition: 'right -24px center, center !important',
-            backgroundSize: '175px, cover !important'
         },
         [theme.breakpoints.up('md')]: {
             backgroundImage: `url(${whiteCircles}), url(${careersHeroDesktopImage})`,

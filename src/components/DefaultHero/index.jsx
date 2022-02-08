@@ -15,8 +15,8 @@ const DefaultHero = ({ page, title }) => {
 
     return (
         <section 
-            className={classNames('block jus py-12 bg-no-repeat bg-center bg-cover', bgClasses[page],
-            globalStyles.px)}>
+            className={classNames('block jus py-12 bg-no-repeat bg-center bg-cover', classes.hero, 
+            bgClasses[page], globalStyles.px)}>
              <Typography
                 className={classNames('font-bold text-white text-center sm:text-left sm:text-5xl')}
                 component="h1"
