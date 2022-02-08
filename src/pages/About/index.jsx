@@ -2,13 +2,14 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
-import { Button, Hidden, Typography } from '@mui/material';
+import { Collapse, List, ListItemButton, ListItemText, Typography } from '@mui/material';
 import DefaultHero from '../../components/DefaultHero';
 import DefaultCard from '../../components/DefaultCard';
 import digitalEraImage from '../../assets/images/digital-era.jpg'
 import betterLivingImage from '../../assets/images/better-living.jpg'
 import JoinUsSection from '../../components/JoinUsSection';
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import ListItem from './ListItem'
 
 const AboutPage = () => {
     const classes = useStyles();
@@ -78,6 +79,34 @@ const AboutPage = () => {
     ), [])
     const joinUsSection = useMemo(() => <JoinUsSection />, []);
 
+    const listItemClickHandler = useCallback(id => () => {
+        setOpen(o => ({ ...o, [id]: !o[id]}))
+    }, []);
+
+
+    const fqasSection = useMemo(() => (
+        <>
+            {
+                faqs.map((item, index) => (
+                    <div key={index} className={classNames('mt-8')}>
+                        <Typography 
+                            className={classNames(globalStyles.darkNavyColor, 'text-center font-bold mb-2')}
+                            component="h3"
+                            variant="h5" 
+                            >
+                            { item.title }
+                        </Typography>
+                        <List>
+                            { item.list.map((subItem, index) => (
+                                <ListItem key={index} { ...subItem } />
+                            ))}
+                        </List>
+                    </div>
+                ))
+            }
+        </>
+    ), [ faqs, globalStyles ]);
+
     useEffect(() => {
         let states = {};
 
@@ -94,6 +123,16 @@ const AboutPage = () => {
             { defaultHero }
             { cardsSection }
             { joinUsSection }
+            <section className={classNames(globalStyles.px)}>
+                <Typography 
+                    className={classNames(globalStyles.darkNavyColor, 'text-center font-bold')}
+                    component="h2"
+                    variant="h4" 
+                    >
+                    FAQs
+                </Typography>
+                { fqasSection }
+            </section>
         </main>
     );
 };
