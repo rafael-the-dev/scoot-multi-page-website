@@ -1,21 +1,18 @@
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
-import { Collapse, List, ListItemButton, ListItemText, Typography } from '@mui/material';
+import { List, Typography } from '@mui/material';
 import DefaultHero from '../../components/DefaultHero';
 import DefaultCard from '../../components/DefaultCard';
 import digitalEraImage from '../../assets/images/digital-era.jpg'
 import betterLivingImage from '../../assets/images/better-living.jpg'
 import JoinUsSection from '../../components/JoinUsSection';
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import ListItem from './ListItem'
 
 const AboutPage = () => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
-
-    const [ open, setOpen ] = useState({ });
 
     const faqs = useMemo(() => [
         {
@@ -67,6 +64,7 @@ const AboutPage = () => {
     ], []);
 
     const defaultHero = useMemo(() => <DefaultHero page="about" title='About' />, []);
+    
     const cardsSection = useMemo(() => (
         <div className={classNames('pt-24 md:pt-20')}>
             <DefaultCard 
@@ -82,13 +80,9 @@ const AboutPage = () => {
                 title="Better urban living"
             />
         </div>
-    ), [])
+    ), []);
+
     const joinUsSection = useMemo(() => <JoinUsSection />, []);
-
-    const listItemClickHandler = useCallback(id => () => {
-        setOpen(o => ({ ...o, [id]: !o[id]}))
-    }, []);
-
 
     const fqasSection = useMemo(() => (
         <>
@@ -113,17 +107,6 @@ const AboutPage = () => {
             }
         </>
     ), [ classes, faqs, globalStyles ]);
-
-    useEffect(() => {
-        let states = {};
-
-        faqs.forEach(item => {
-            item.list.forEach(subItem => {
-                states = { ...states, [subItem.id]: false }
-            })
-        });
-        setOpen(states)
-    }, [ faqs ])
 
     return (
         <main>
