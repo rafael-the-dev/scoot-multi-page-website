@@ -12,7 +12,7 @@ const JoinUsSection = () => {
     const globalStyles = useGlobalStyles();
 
     return (
-        <section className={classNames(globalStyles.px, 'py-12')}>
+        <section className={classNames(globalStyles.px, 'py-12 md:pt-8')}>
             <Typography 
                 className={classNames(globalStyles.darkNavyColor, 'text-center font-bold')}
                 component="h2"
