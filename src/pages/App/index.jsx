@@ -13,7 +13,7 @@ const App = () => {
     const Header = loadable(() => import(/* webpackChunkName: "Header" */ '../../components/Header'));
     const Footer = loadable(() => import(/* webpackChunkName: "Footer" */ '../../components/Footer'));
     const SignInBanner = loadable(() => import(/* webpackChunkName: "SignInBanner" */ '../../components/SignInBanner'));
-    //const PricingPage = loadable(() => import(/* webpackChunkName: "PricingPage" */ '../Pricing'));
+    const CareersPage = loadable(() => import(/* webpackChunkName: "CareersPage" */ '../Careers'));
     const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
     //const ContactPage = loadable(() => import(/* webpackChunkName: "ContactPage" */ '../Contact'));
 
@@ -28,6 +28,7 @@ const App = () => {
                             <Header />
                             <Routes>
                                 <Route exact path="/about-us" element={<AboutUsPage />} />
+                                <Route exact path="/careers" element={<CareersPage />} />
                                 <Route path="/" element={<HomePage />} />
                             </Routes>
                             <SignInBanner />
