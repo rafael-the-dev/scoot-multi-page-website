@@ -8,10 +8,52 @@ import DefaultCard from '../../components/DefaultCard';
 import digitalEraImage from '../../assets/images/digital-era.jpg'
 import betterLivingImage from '../../assets/images/better-living.jpg'
 import JoinUsSection from '../../components/JoinUsSection';
+import { useMemo, useState } from 'react'
 
 const AboutPage = () => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
+
+    const [ open, setOpen ] = useState({ });
+
+    const faqs = useMemo(() => [
+        {
+            title: 'How it works',
+            list: [
+                {
+                    question: 'How do I download the app?',
+                    answer: 'To download the Scoot app, you can search “Scoot” in both the App and Google Play stores. An even simpler way to do it would be to click the relevant link at the bottom of this page and you’ll be re-directed to the correct page.'
+                },
+                {
+                    question: 'Can I find a nearby Scoots?',
+                    answer: ''
+                },
+                {
+                    question: 'Do I need a license to ride?',
+                    answer: ''
+                }
+            ]
+        }, 
+        {
+            title: 'Safe driving',
+            list: [
+                {
+                    question: 'Should I wear a helmet?',
+                    answer: 'Yes, please do! All cities have different laws. But we strongly strongly strongly recommend always wearing a helmet regardless of the local laws. We like you and we want you to be as safe as possible while Scooting.'
+                },
+                {
+                    question: 'How about the rules & regulations?',
+                    answer: ''
+                },
+                {
+                    question: 'What if I damage my Scoot?',
+                    answer: ''
+                }
+            ]
+        }
+    ], []);
+
+    const joinUsSection = useMemo(() => <JoinUsSection />, []);
 
     return (
         <main>
@@ -33,7 +75,7 @@ const AboutPage = () => {
                     title="Better urban living"
                 />
             </div>
-            <JoinUsSection />
+            { joinUsSection }
         </main>
     );
 };
