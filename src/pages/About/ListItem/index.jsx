@@ -15,7 +15,7 @@ const ListItem = ({ answer, question }) => {
     return (
         <>
             <ListItemButton 
-                className={classNames(classes.bg, { 'mb-4': !open })}
+                className={classNames(classes.bg, 'md:py-4', { 'mb-4': !open })}
                 onClick={() => setOpen(s => !s)}>
                 <ListItemText 
                     classes={{ primary: 'font-bold'}}

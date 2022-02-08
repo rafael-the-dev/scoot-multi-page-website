@@ -88,15 +88,16 @@ const AboutPage = () => {
         <>
             {
                 faqs.map((item, index) => (
-                    <div key={index} className={classNames('mt-8')}>
+                    <div key={index} className={classNames('mt-8 md:flex md:items-start')}>
                         <Typography 
-                            className={classNames(globalStyles.darkNavyColor, 'text-center font-bold mb-2')}
+                            className={classNames(globalStyles.darkNavyColor, classes.faqTitle ,
+                            'text-center md:text-left font-bold mb-2 md:mb-0')}
                             component="h3"
                             variant="h5" 
                             >
                             { item.title }
                         </Typography>
-                        <List>
+                        <List className={classNames(classes.faqList, 'md:grow md:ml md:py-0')}>
                             { item.list.map((subItem, index) => (
                                 <ListItem key={index} { ...subItem } />
                             ))}
@@ -105,7 +106,7 @@ const AboutPage = () => {
                 ))
             }
         </>
-    ), [ faqs, globalStyles ]);
+    ), [ classes, faqs, globalStyles ]);
 
     useEffect(() => {
         let states = {};
@@ -123,7 +124,7 @@ const AboutPage = () => {
             { defaultHero }
             { cardsSection }
             { joinUsSection }
-            <section className={classNames(globalStyles.px)}>
+            <section className={classNames(globalStyles.px, 'mb-12 -mt-4')}>
                 <Typography 
                     className={classNames(globalStyles.darkNavyColor, 'text-center font-bold')}
                     component="h2"
