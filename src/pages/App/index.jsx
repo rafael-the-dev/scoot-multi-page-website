@@ -3,8 +3,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { StylesProvider } from '@mui/styles';
 import { AppContextProvider } from '../../context/AppContext';
 import loadable from '@loadable/component';
-//import { useEffect } from "react";
-//import AOS from 'aos'
 
 const App = () => {
     const theme = createTheme();
@@ -15,9 +13,7 @@ const App = () => {
     const SignInBanner = loadable(() => import(/* webpackChunkName: "SignInBanner" */ '../../components/SignInBanner'));
     const CareersPage = loadable(() => import(/* webpackChunkName: "CareersPage" */ '../Careers'));
     const AboutUsPage = loadable(() => import(/* webpackChunkName: "AboutUsPage" */ '../About'));
-    //const ContactPage = loadable(() => import(/* webpackChunkName: "ContactPage" */ '../Contact'));
-
-    //useEffect(() => AOS.init(), [])
+    const LocationsPage = loadable(() => import(/* webpackChunkName: "LocationsPage" */ '../Locations'));
 
     return (
         <>
@@ -28,6 +24,7 @@ const App = () => {
                             <Header />
                             <Routes>
                                 <Route exact path="/about-us" element={<AboutUsPage />} />
+                                <Route exact path="/locations" element={<LocationsPage />} />
                                 <Route exact path="/careers" element={<CareersPage />} />
                                 <Route path="/" element={<HomePage />} />
                             </Routes>
