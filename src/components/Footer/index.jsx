@@ -24,21 +24,21 @@ const Footer = () => {
                     <li className={classNames('mb-3 sm:mb-0 sm:mr-4')}>
                         <Link
                             className={classNames(globalStyles.dimGreyColor, globalStyles.yellowHover, 'font-bold')} 
-                            to="/">
+                            to="/about-us">
                             About
                         </Link>
                     </li>
                     <li className={classNames('mb-3 sm:mb-0 sm:mr-4')}>
                         <Link
                             className={classNames(globalStyles.dimGreyColor, globalStyles.yellowHover, 'font-bold')} 
-                            to="/">
+                            to="/locations">
                             Location
                         </Link>
                     </li>
                     <li>
                         <Link
                             className={classNames(globalStyles.dimGreyColor, globalStyles.yellowHover, 'font-bold')} 
-                            to="/">
+                            to="/careers">
                             Careers
                         </Link>
                     </li>

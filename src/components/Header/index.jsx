@@ -21,28 +21,28 @@ const Header = () => {
             className={classNames(`sm:ml-12 sm:relative h-full w-full flex flex-col justify-between
             pt-12 pb-8 sm:px-0 sm:py-0`, globalStyles.px, classes.headerNav)}>
             <List component="ul" className={classNames('flex flex-col sm:flex-row sm:pb-0 sm:pt-0')}>
-                <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/" >
+                <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/about-us" >
                     <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0', 
                             globalStyles.lightGreyColor, classes.headerNavItemText, globalStyles.yellowHover)}} 
-                            primary="Home" />
+                            primary="About" />
                     </ListItemButton>
                 </ListItem>
-                <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/projects">
+                <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/locations">
                     <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText 
                             classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0', 
                             globalStyles.lightGreyColor, classes.headerNavItemText, globalStyles.yellowHover)}} 
-                            primary="Projects" 
+                            primary="Location" 
                         />
                     </ListItemButton>
                 </ListItem>
-                <ListItem className={classNames('sm:px-0 sm:w-auto')} disablePadding onClick={clickHandler} component={Link} to="/resume">
+                <ListItem className={classNames('sm:px-0 sm:w-auto')} disablePadding onClick={clickHandler} component={Link} to="/careers">
                     <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText 
                             classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0',
                             globalStyles.lightGreyColor, classes.headerNavItemText, globalStyles.yellowHover)}} 
-                            primary="Resume" 
+                            primary="Careers" 
                         />
                     </ListItemButton>
                 </ListItem>
