@@ -3,12 +3,12 @@ import ourTechImage from '../../assets/images/our-tech.jpg'
 import ourIntegrityImage from '../../assets/images/our-integrity.jpg'
 import ourCommunityImage from '../../assets/images/our-community.jpg'
 import classNames from 'classnames'
-import { useStyles } from './styles'
+//import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
 import { Typography } from '@mui/material';
 
 const JoinUsSection = () => {
-    const classes = useStyles();
+    //const classes = useStyles();
     const globalStyles = useGlobalStyles();
 
     return (

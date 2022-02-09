@@ -1,6 +1,5 @@
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
-import React, { useMemo, useCallback, useState } from 'react';
+import React, { useMemo } from 'react';
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
