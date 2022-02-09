@@ -10,7 +10,7 @@ const DefaultHero = ({ page, title }) => {
 
     const bgClasses = useMemo(() => ({
         about: classes.heroAbout,
-        careers: classes.heroCareers
+        careers: classes.heroCareers,
     }), [ classes ])
 
     return (

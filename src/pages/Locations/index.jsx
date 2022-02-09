@@ -3,6 +3,7 @@ import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
 import { Button, Typography } from '@mui/material';
 import { Link } from 'react-router-dom'
+import DefaultHero from '../../components/DefaultHero';
 import ourCommunityImage from '../../assets/images/our-community.jpg'
 
 const Locations = () => {
@@ -11,6 +12,7 @@ const Locations = () => {
 
     return (
         <main>
+            <DefaultHero page="careers" title='Locations' />
             <section className={classNames(globalStyles.px, `flex flex-col items-center py-12 md:flex-row
                 md:justify-between`)}>
                 <Typography 
