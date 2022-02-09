@@ -1,10 +1,12 @@
 import classNames from 'classnames'
 import { useStyles } from './styles'
 import { useGlobalStyles } from '../../styles';
-import { Button, Typography } from '@mui/material';
+import { Button, Hidden, Typography } from '@mui/material';
 import { Link } from 'react-router-dom'
 import DefaultHero from '../../components/DefaultHero';
 import worldMapImage from '../../assets/images/world-map-mobile.png'
+import worldMapTabletImage from '../../assets/images/world-map-mobile.png'
+import worldMapDesktopImage from '../../assets/images/world-map-mobile.png'
 
 const Locations = () => {
     const classes = useStyles();
@@ -23,21 +25,35 @@ const Locations = () => {
         )
     };
 
+    const Image = ({ src }) => (
+        <img
+            alt="locations"
+            className={classNames('block object-contain w-full h-full')}
+            src={src}
+        />
+    );
+
     return (
         <main>
             <DefaultHero page="careers" title='Locations' />
-            <section className={classNames(globalStyles.px,)}>
+            <section className={classNames(globalStyles.px, `md:py-12`)}>
                 <div className={classNames(classes.worldMapImageContainer)}>
-                    <img
-                        alt="locations"
-                        className={classNames('block object-contain w-full h-full')}
-                        src={worldMapImage}
-                    />
+                    <Hidden smUp>
+                        <Image src={worldMapImage} />
+                    </Hidden>
+                    <Hidden smDown mdUp>
+                        <Image src={worldMapTabletImage} />
+                    </Hidden>
+                    <Hidden mdDown>
+                        <Image src={worldMapDesktopImage} />
+                    </Hidden>
                 </div>
-                <Location name="New york" />
-                <Location name="London" />
-                <Location name="Jakarta" />
-                <Location name="Yokohama" />
+               <Hidden mdUp>
+                    <Location name="New york" />
+                    <Location name="London" />
+                    <Location name="Jakarta" />
+                    <Location name="Yokohama" />
+               </Hidden>
             </section>
             <section className={classNames(globalStyles.px, `flex flex-col items-center py-12 md:flex-row
                 md:justify-between`)}>

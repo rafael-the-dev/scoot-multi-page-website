@@ -2,7 +2,13 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(theme => ({
     worldMapImageContainer: {
-        height: 300
+        height: 300,
+        [theme.breakpoints.up('sm')]: {
+            height: 350
+        },
+        [theme.breakpoints.up('md')]: {
+            height: 450
+        },
     },
     location: {
         backgroundColor: '#FFF4DF'
