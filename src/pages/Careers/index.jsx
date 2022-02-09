@@ -73,7 +73,8 @@ const Careers = () => {
                             </div>
                             <Link to="/" className={classNames(classes.heroLink, 'w-full sm:w-auto mt-8 sm:mt-0')}>
                                 <Button 
-                                    className={classNames('capitalize w-full sm:w-auto sm:px-12 md:px-20 py-2.5', globalStyles.yellowBg)}
+                                    className={classNames('capitalize w-full sm:w-auto sm:px-12 md:px-20 py-2.5', 
+                                    globalStyles.yellowBg, globalStyles.yellowButton)}
                                     variant="contained">
                                     Apply
                                 </Button>

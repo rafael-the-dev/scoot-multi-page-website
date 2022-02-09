@@ -50,7 +50,7 @@ const Header = () => {
                 <Link to="/" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
                     <Button 
                         className={classNames('text-white font-bold w-full py-3 text-base capitalize', classes.headerGetStarted, 
-                        globalStyles.yellowBg, 'bg-transition')}
+                        globalStyles.yellowBg, globalStyles.yellowButton, 'bg-transition')}
                         variant="contained">
                         Get scootin
                     </Button>
@@ -88,7 +88,7 @@ const Header = () => {
                 <Link to="/" onClick={clickHandler} className={classNames(classes.contactMeLink)}>
                     <Button 
                         className={classNames('text-white font-bold w-full py-2 shadow-none text-base capitalize', classes.headerGetStarted, 
-                        globalStyles.yellowBg, 'bg-transition')}
+                        globalStyles.yellowBg, globalStyles.yellowButton, 'bg-transition')}
                         variant="contained">
                         Get scootin
                     </Button>

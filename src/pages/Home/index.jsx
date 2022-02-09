@@ -33,7 +33,7 @@ const Home = () => {
                 </Typography>
                 <Link to="/" className={classNames(classes.heroLink)}>
                     <Button 
-                        className={classNames('capitalize px-8 py-2 mt-6', globalStyles.yellowBg)}
+                        className={classNames('capitalize px-8 py-2 mt-6', globalStyles.yellowBg, globalStyles.yellowButton)}
                         variant="contained">
                         Get scootin
                     </Button>
