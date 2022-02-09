@@ -44,6 +44,11 @@ export const useGlobalStyles = makeStyles(theme => ({
     yellowColor: {
         color: '#FCB72B'
     },
+    yellowHover: {
+        '&:hover': {
+            color: '#FCB72B !important'
+        }
+    },
     lightPinkButton: {
         '&:hover': {
             backgroundColor: '#FFF4DF !important',

@@ -24,14 +24,15 @@ const Header = () => {
                 <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/" >
                     <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0', 
-                            globalStyles.lightGreyColor, classes.headerNavItemText)}} primary="Home" />
+                            globalStyles.lightGreyColor, classes.headerNavItemText, globalStyles.yellowHover)}} 
+                            primary="Home" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem className={classNames('sm:px-0 sm:w-auto sm:mr-6')} disablePadding onClick={clickHandler} component={Link} to="/projects">
                     <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText 
                             classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0', 
-                            globalStyles.lightGreyColor, classes.headerNavItemText)}} 
+                            globalStyles.lightGreyColor, classes.headerNavItemText, globalStyles.yellowHover)}} 
                             primary="Projects" 
                         />
                     </ListItemButton>
@@ -40,7 +41,7 @@ const Header = () => {
                     <ListItemButton className={classNames('sm:py-0 sm:px-0 sm:hover:bg-transparent')}>
                         <ListItemText 
                             classes={{ root: classNames('color-transition sm:mb-0 sm:mt-0',
-                            globalStyles.lightGreyColor, classes.headerNavItemText)}} 
+                            globalStyles.lightGreyColor, classes.headerNavItemText, globalStyles.yellowHover)}} 
                             primary="Resume" 
                         />
                     </ListItemButton>

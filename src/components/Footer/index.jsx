@@ -23,21 +23,21 @@ const Footer = () => {
                 <ul className={classNames('flex flex-col mt-8 items-center sm:mt-0 sm:ml-8 sm:flex-row md:ml-12')}>
                     <li className={classNames('mb-3 sm:mb-0 sm:mr-4')}>
                         <Link
-                            className={classNames(globalStyles.dimGreyColor, 'font-bold')} 
+                            className={classNames(globalStyles.dimGreyColor, globalStyles.yellowHover, 'font-bold')} 
                             to="/">
                             About
                         </Link>
                     </li>
                     <li className={classNames('mb-3 sm:mb-0 sm:mr-4')}>
                         <Link
-                            className={classNames(globalStyles.dimGreyColor, 'font-bold')} 
+                            className={classNames(globalStyles.dimGreyColor, globalStyles.yellowHover, 'font-bold')} 
                             to="/">
                             Location
                         </Link>
                     </li>
                     <li>
                         <Link
-                            className={classNames(globalStyles.dimGreyColor, 'font-bold')} 
+                            className={classNames(globalStyles.dimGreyColor, globalStyles.yellowHover, 'font-bold')} 
                             to="/">
                             Careers
                         </Link>
@@ -46,13 +46,13 @@ const Footer = () => {
             </div>
             <ul className={classNames('flex mt-12 items-center sm:mt-0')}>
                 <li className={classNames('mr-3')}>
-                    <FacebookIcon className={classNames(globalStyles.yellowColor)} />
+                    <FacebookIcon className={classNames(globalStyles.yellowColor, 'hover:text-white')} />
                 </li>
                 <li className={classNames('mr-3')}>
-                    <TwitterIcon className={classNames(globalStyles.yellowColor)} />
+                    <TwitterIcon className={classNames(globalStyles.yellowColor, 'hover:text-white')} />
                 </li>
                 <li>
-                    <InstagramIcon className={classNames(globalStyles.yellowColor)} />
+                    <InstagramIcon className={classNames(globalStyles.yellowColor, 'hover:text-white')} />
                 </li>
             </ul>
         </footer>

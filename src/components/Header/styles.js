@@ -17,7 +17,7 @@ export const useStyles = makeStyles(theme => ({
     },
     headerNavItemText: {
         [theme.breakpoints.up('sm')]: {
-            color: '#939CAA'
+            color: '#939CAA !important'
         }
     }
 }));
