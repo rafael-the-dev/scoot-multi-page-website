@@ -4,15 +4,41 @@ import { useGlobalStyles } from '../../styles';
 import { Button, Typography } from '@mui/material';
 import { Link } from 'react-router-dom'
 import DefaultHero from '../../components/DefaultHero';
-import ourCommunityImage from '../../assets/images/our-community.jpg'
+import worldMapImage from '../../assets/images/world-map-mobile.png'
 
 const Locations = () => {
     const classes = useStyles();
     const globalStyles = useGlobalStyles();
 
+    const Location = ({ name }) => {
+        return (
+            <Typography
+                className={classNames(globalStyles.darkNavyColor, classes.location, `capitalize py-6 w-full 
+                font-bold text-center mb-4`)}
+                component="p"
+                variant="h6"
+            >
+                { name }
+            </Typography>
+        )
+    };
+
     return (
         <main>
             <DefaultHero page="careers" title='Locations' />
+            <section className={classNames(globalStyles.px,)}>
+                <div className={classNames(classes.worldMapImageContainer)}>
+                    <img
+                        alt="locations"
+                        className={classNames('block object-contain w-full h-full')}
+                        src={worldMapImage}
+                    />
+                </div>
+                <Location name="New york" />
+                <Location name="London" />
+                <Location name="Jakarta" />
+                <Location name="Yokohama" />
+            </section>
             <section className={classNames(globalStyles.px, `flex flex-col items-center py-12 md:flex-row
                 md:justify-between`)}>
                 <Typography 
