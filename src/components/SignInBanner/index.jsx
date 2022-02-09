@@ -12,7 +12,7 @@ const SignInBanner = () => {
 
     return (
         <section className={classNames(globalStyles.px, globalStyles.darkNavyBg, `py-12 bg-no-repeat 
-            flex items-center flex-col md:flex-row md:justify-between sm:py-16`, classes.signInBanner)}>
+            flex items-center flex-col md:flex-row md:justify-between mt-12 md:mt-16 sm:py-16`, classes.signInBanner)}>
             <Typography 
                 component="h2" 
                 variant="h4" 
